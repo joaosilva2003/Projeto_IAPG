@@ -47,13 +47,10 @@ void estGenero (CAO array[], int ncao);
 typedef struct {
     int dia, mes, ano;
 } DataNascimento;
+
 typedef struct {
     int dia, mes, ano;
 } Nova_ocorrencia;
-typedef struct EventoHistorico {
-    char tipo[MAX_LEN];
-    char info[MAX_LEN];
-} evento;
 
 void adicionarEventoHistorico();
 void mudanca_dono();

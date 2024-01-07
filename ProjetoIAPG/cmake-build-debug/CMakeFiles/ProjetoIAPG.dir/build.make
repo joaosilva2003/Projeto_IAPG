@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\joaok\Desktop\Git\ProjetoIAPG
+CMAKE_SOURCE_DIR = "C:\Users\joaok\Desktop\Final git\ProjetoIAPG"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\joaok\Desktop\Git\ProjetoIAPG\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\joaok\Desktop\Final git\ProjetoIAPG\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ProjetoIAPG.dir/depend.make
@@ -69,32 +69,32 @@ include CMakeFiles/ProjetoIAPG.dir/progress.make
 include CMakeFiles/ProjetoIAPG.dir/flags.make
 
 CMakeFiles/ProjetoIAPG.dir/main.c.obj: CMakeFiles/ProjetoIAPG.dir/flags.make
-CMakeFiles/ProjetoIAPG.dir/main.c.obj: C:/Users/joaok/Desktop/Git/ProjetoIAPG/main.c
+CMakeFiles/ProjetoIAPG.dir/main.c.obj: C:/Users/joaok/Desktop/Final\ git/ProjetoIAPG/main.c
 CMakeFiles/ProjetoIAPG.dir/main.c.obj: CMakeFiles/ProjetoIAPG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\joaok\Desktop\Git\ProjetoIAPG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ProjetoIAPG.dir/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProjetoIAPG.dir/main.c.obj -MF CMakeFiles\ProjetoIAPG.dir\main.c.obj.d -o CMakeFiles\ProjetoIAPG.dir\main.c.obj -c C:\Users\joaok\Desktop\Git\ProjetoIAPG\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\joaok\Desktop\Final git\ProjetoIAPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ProjetoIAPG.dir/main.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProjetoIAPG.dir/main.c.obj -MF CMakeFiles\ProjetoIAPG.dir\main.c.obj.d -o CMakeFiles\ProjetoIAPG.dir\main.c.obj -c "C:\Users\joaok\Desktop\Final git\ProjetoIAPG\main.c"
 
 CMakeFiles/ProjetoIAPG.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ProjetoIAPG.dir/main.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\joaok\Desktop\Git\ProjetoIAPG\main.c > CMakeFiles\ProjetoIAPG.dir\main.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\joaok\Desktop\Final git\ProjetoIAPG\main.c" > CMakeFiles\ProjetoIAPG.dir\main.c.i
 
 CMakeFiles/ProjetoIAPG.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ProjetoIAPG.dir/main.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\joaok\Desktop\Git\ProjetoIAPG\main.c -o CMakeFiles\ProjetoIAPG.dir\main.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\joaok\Desktop\Final git\ProjetoIAPG\main.c" -o CMakeFiles\ProjetoIAPG.dir\main.c.s
 
 CMakeFiles/ProjetoIAPG.dir/funcoes.c.obj: CMakeFiles/ProjetoIAPG.dir/flags.make
-CMakeFiles/ProjetoIAPG.dir/funcoes.c.obj: C:/Users/joaok/Desktop/Git/ProjetoIAPG/funcoes.c
+CMakeFiles/ProjetoIAPG.dir/funcoes.c.obj: C:/Users/joaok/Desktop/Final\ git/ProjetoIAPG/funcoes.c
 CMakeFiles/ProjetoIAPG.dir/funcoes.c.obj: CMakeFiles/ProjetoIAPG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\joaok\Desktop\Git\ProjetoIAPG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ProjetoIAPG.dir/funcoes.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProjetoIAPG.dir/funcoes.c.obj -MF CMakeFiles\ProjetoIAPG.dir\funcoes.c.obj.d -o CMakeFiles\ProjetoIAPG.dir\funcoes.c.obj -c C:\Users\joaok\Desktop\Git\ProjetoIAPG\funcoes.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\joaok\Desktop\Final git\ProjetoIAPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ProjetoIAPG.dir/funcoes.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ProjetoIAPG.dir/funcoes.c.obj -MF CMakeFiles\ProjetoIAPG.dir\funcoes.c.obj.d -o CMakeFiles\ProjetoIAPG.dir\funcoes.c.obj -c "C:\Users\joaok\Desktop\Final git\ProjetoIAPG\funcoes.c"
 
 CMakeFiles/ProjetoIAPG.dir/funcoes.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ProjetoIAPG.dir/funcoes.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\joaok\Desktop\Git\ProjetoIAPG\funcoes.c > CMakeFiles\ProjetoIAPG.dir\funcoes.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\joaok\Desktop\Final git\ProjetoIAPG\funcoes.c" > CMakeFiles\ProjetoIAPG.dir\funcoes.c.i
 
 CMakeFiles/ProjetoIAPG.dir/funcoes.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ProjetoIAPG.dir/funcoes.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\joaok\Desktop\Git\ProjetoIAPG\funcoes.c -o CMakeFiles\ProjetoIAPG.dir\funcoes.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\joaok\Desktop\Final git\ProjetoIAPG\funcoes.c" -o CMakeFiles\ProjetoIAPG.dir\funcoes.c.s
 
 # Object files for target ProjetoIAPG
 ProjetoIAPG_OBJECTS = \
@@ -110,7 +110,7 @@ ProjetoIAPG.exe: CMakeFiles/ProjetoIAPG.dir/build.make
 ProjetoIAPG.exe: CMakeFiles/ProjetoIAPG.dir/linkLibs.rsp
 ProjetoIAPG.exe: CMakeFiles/ProjetoIAPG.dir/objects1.rsp
 ProjetoIAPG.exe: CMakeFiles/ProjetoIAPG.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\joaok\Desktop\Git\ProjetoIAPG\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ProjetoIAPG.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\joaok\Desktop\Final git\ProjetoIAPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ProjetoIAPG.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProjetoIAPG.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -122,6 +122,6 @@ CMakeFiles/ProjetoIAPG.dir/clean:
 .PHONY : CMakeFiles/ProjetoIAPG.dir/clean
 
 CMakeFiles/ProjetoIAPG.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\joaok\Desktop\Git\ProjetoIAPG C:\Users\joaok\Desktop\Git\ProjetoIAPG C:\Users\joaok\Desktop\Git\ProjetoIAPG\cmake-build-debug C:\Users\joaok\Desktop\Git\ProjetoIAPG\cmake-build-debug C:\Users\joaok\Desktop\Git\ProjetoIAPG\cmake-build-debug\CMakeFiles\ProjetoIAPG.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\joaok\Desktop\Final git\ProjetoIAPG" "C:\Users\joaok\Desktop\Final git\ProjetoIAPG" "C:\Users\joaok\Desktop\Final git\ProjetoIAPG\cmake-build-debug" "C:\Users\joaok\Desktop\Final git\ProjetoIAPG\cmake-build-debug" "C:\Users\joaok\Desktop\Final git\ProjetoIAPG\cmake-build-debug\CMakeFiles\ProjetoIAPG.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/ProjetoIAPG.dir/depend
 

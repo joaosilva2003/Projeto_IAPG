@@ -579,189 +579,8 @@ void estGenero(CAO array[], int ncao) {
 
 
 
-//parte da beatriz
-/*
-int Iresposta;
-//--------------------------------------------------[DECLARAÇÃO DAS FUNÇÕES QUE ESTÃO PRESENTES NOS MENUS]------------------------------------------------------------------
 
-//----------------------------------------------------------------------[MENU DA 3ª OPÇÃO]---------------------------------------------------------------------------------
-
-void adicionarEventoHistorico() { // criação de um menu que permite a escolha do tipo de evento a adicionar
-
-    do {
-        printf("[Menu de informacoes adicionais]\n");
-        printf("[1] Adicionar um acidente.\n");
-        printf("[2] Atualizar registos medicos.\n");
-        printf("[3] Alterar a informacao sobre o dono.\n");
-        printf("[4] Alterar a morada da vivencia do cao. \n ");
-        printf("Faca a sua escolha: ");
-        scanf("%d", &Iresposta);
-
-        if (Iresposta <= 4) {
-            switch (Iresposta) {
-                case 1:
-                    printf("[Escolheu adicionar um acidente.] ");
-                    acidente();
-                    break;
-                case 2:
-                    printf("[Escolheu atualizar registos medicos.]");
-                    registos_medicos();
-                    break;
-                case 3:
-                    printf("[Escolheu alterar a informacao sobre o dono.]\n");
-                    mudanca_dono();
-                    break;
-                case 4:
-                    printf("[Escolheu alterar a morada da vivencia do cão] ");
-                    mudanca_morada();
-                    break;
-                default:
-                    printf("Opção invalida, por favor escolha uma outra opcao ");
-                    printf("\nSelecione uma opcao: ");
-                    scanf("%d", &Iresposta);
-                    break;
-            }
-
-
-        }
-    } while (Iresposta > 4 || Iresposta == 0);
-
-}
-//-------------------------------------------------------------------[COMPONENTE DA OPÇÃO Nº3 DO MENU ACIMA]---------------------------------------------------------------------------------
-
-void mudanca_dono() {
-    FILE *pWrite;
-
-    char morada[MAX_LEN];
-    char nome[MAX_LEN];
-    int idade;
-    char cc[MAX_LEN];
-    char email[MAX_LEN];
-    int telemovel;
-    char cp[MAX_LEN];
-    DataNascimento dataNascimento;
-
-    pWrite = fopen("eventoscaes.txt", "w");
-
-    if (pWrite == NULL) {
-        printf("\n O ficheiro nao foi aberto");
-    } else {
-        printf("Introduza as informacoes sobre o novo dono\n");
-
-        printf("\nInsira o nome completo: ");
-        getchar();
-        fgets(nome, MAX_LEN, stdin);
-
-        printf("\nInsira a idade: ");
-        scanf("%d", &idade);
-
-        printf("\nInsira a data de nascimento (dia mes ano): ");
-        scanf("%d %d %d", &dataNascimento.dia, &dataNascimento.mes, &dataNascimento.ano);
-
-
-        printf("\nInsira o email: ");
-        scanf("%s", email);
-
-        printf("\nInsira o numero de telemovel: ");
-        scanf("%d", &telemovel);
-
-        printf("\nInisra o numero do cartao de cidadao: ");
-        scanf("%s", cc);
-
-        printf("\nInsira a morada: ");
-        getchar();
-        fgets(morada, MAX_LEN, stdin);
-
-        printf("\nInsira o codigo postal: ");
-        scanf("%s", cp);
-
-
-        fprintf(pWrite,
-                "\nNome Completo: %sIdade: %d anos \nData de Nascimento: %d/%d/%d \nEmail: %s \nTelemovel: %d \nCartão de Cidadão: %s \nMorada: %sCodigo Postal: %s",
-                nome, idade, dataNascimento.dia, dataNascimento.mes, dataNascimento.ano, email, telemovel, cc, morada,
-                cp);
-
-        fclose(pWrite);
-    }
-}
-
-//-------------------------------------------------------------------[COMPONENTE DA OPÇÃO Nº4 DO MENU ACIMA]---------------------------------------------------------------
-void mudanca_morada() {
-
-    FILE *pWrite;
-    pWrite = fopen("eventoscaes.txt", "w");
-    if (pWrite == NULL) {
-        printf("\n O ficheiro nao foi aberto");
-    } else {
-
-        Nova_ocorrencia data_nova_ocorrencia;
-        printf("\nInsira da data do evento: ");
-        scanf("%d %d %d", &data_nova_ocorrencia.dia, &data_nova_ocorrencia.mes, &data_nova_ocorrencia.ano);
-        fprintf(pWrite, "data: %d/%d/%d", data_nova_ocorrencia.dia, data_nova_ocorrencia.mes, data_nova_ocorrencia.ano);
-
-        char morada[MAX_LEN];
-        char morada_antiga[MAX_LEN];
-
-        printf("\nInsira a morada antiga: ");
-        getchar();
-        fgets(morada_antiga, MAX_LEN, stdin);
-        fprintf(pWrite, "\nMorada Antiga: %s\n", morada_antiga);
-
-        printf("\nInsira a nova morada:  ");
-        fgets(morada, MAX_LEN, stdin);
-        fprintf(pWrite, "Nova Morada: %s", morada);
-
-        fclose(pWrite);
-    }
-
-}
-
-//-------------------------------------------------------------------[COMPONENTE DA OPÇÃO Nº1 DO MENU ACIMA]---------------------------------------------------------------
-void acidente() {
-    FILE *pWrite;
-    pWrite = fopen("eventoscaes.txt", "w");
-    if (pWrite == NULL) {
-        printf("\n O ficheiro nao foi aberto");
-    } else {
-        Nova_ocorrencia data_nova_ocorrencia;
-        printf("\nInsira a data do evento: ");
-        scanf("%d %d %d", &data_nova_ocorrencia.dia, &data_nova_ocorrencia.mes, &data_nova_ocorrencia.ano);
-        fprintf(pWrite, "Acidente;%d/%d/%d;", data_nova_ocorrencia.dia, data_nova_ocorrencia.mes, data_nova_ocorrencia.ano);
-
-        char acidente[MAX_LEN];
-        printf("\nInsira o tipo de acidente que o cao sofreu:");
-        getchar();
-        fgets(acidente, MAX_LEN, stdin);
-        fprintf(pWrite, "%s", acidente);
-
-        fclose(pWrite);
-    }
-}
-
-//-------------------------------------------------------------------[COMPONENTE DA OPÇÃO Nº2 DO MENU ACIMA]---------------------------------------------------------------
-void registos_medicos() {
-
-    FILE *pWrite;
-    pWrite = fopen("eventoscaes.txt", "w");
-    if (pWrite == NULL) {
-        printf("\n O ficheiro nao foi aberto");
-    } else {
-        Nova_ocorrencia data_nova_ocorrencia;
-        printf("\nInsira da data do evento: ");
-        scanf("%d %d %d", &data_nova_ocorrencia.dia, &data_nova_ocorrencia.mes, &data_nova_ocorrencia.ano);
-        fprintf(pWrite, "data: %d/%d/%d", data_nova_ocorrencia.dia, data_nova_ocorrencia.mes, data_nova_ocorrencia.ano);
-
-
-        char registos_medicos[MAX_LEN];
-        printf("Insira as alteracoes desejadas: ");
-        getchar();
-        fgets(registos_medicos, MAX_LEN, stdin);
-        fprintf(pWrite, "\nAssunto: %s", registos_medicos);
-
-        fclose(pWrite);
-    }
-} */
-void adicionarEventoHistorico() { // criação de um menu que permite a escolha do tipo de evento a adicionar
+void adicionarEventoHistorico() {
 
     int Jresposta = 0;
     do {
@@ -774,7 +593,7 @@ void adicionarEventoHistorico() { // criação de um menu que permite a escolha 
         printf("Faca a sua escolha: ", Jresposta);
         scanf("%d", &Jresposta);
 
-        if (Jresposta <= 5) {
+        if (Jresposta <= 4) {
             switch (Jresposta) {
                 case 0:
                     menu();
@@ -795,24 +614,14 @@ void adicionarEventoHistorico() { // criação de um menu que permite a escolha 
                     printf("[Escolheu alterar a morada da vivencia do cao]\n ");
                     mudanca_morada();
                     break;
-                case 5:
-                    printf("Escolheu exportar para ficheiro:");
-                    int escreverFicheiroCaoEventos(int tipoEvento, char infoAdicional[], char fileName[]);
-                    break;
-
                 default:
                     printf("Opcao invalida, por favor escolha uma outra opcao ");
                     printf("\nSelecione uma opcao: ");
                     scanf("%d", &Jresposta);
                     break;
             }
-
-
         }
-    } while (Jresposta > 5 || Jresposta == 0);
-
-
-
+    } while (Jresposta > 4 || Jresposta == 0);
 }
 
 void mudanca_dono() {
@@ -836,7 +645,7 @@ void mudanca_dono() {
         scanf("%d", &id);
 
         printf("\nInsira o nome completo: ");
-        //scanf(" %[^\n]", nome);
+
         getchar();
         fgets(nome, MAX_LEN, stdin);
         nome[strcspn(nome, "\n")] = '\0';
@@ -858,7 +667,7 @@ void mudanca_dono() {
         scanf("%s", cc);
 
         printf("\nInsira a morada: ");
-        //scanf(" %[^\n]", morada);
+
         getchar();
         fgets(morada, MAX_LEN, stdin);
         morada[strcspn(morada, "\n")] = '\0';
@@ -874,7 +683,7 @@ void mudanca_dono() {
     }
 
 }
-void mudanca_morada(){
+void mudanca_morada() {
     int id;
     FILE *pWrite;
     pWrite = fopen("eventoscaes.txt", "a");
@@ -891,14 +700,14 @@ void mudanca_morada(){
 
         char morada_antiga[MAX_LEN];
         printf("\nInsira a morada antiga: ");
-        //scanf(" %[^\n]", morada_antiga);
+
         getchar();
         fgets(morada_antiga, MAX_LEN, stdin);
         morada_antiga[strcspn(morada_antiga, "\n")] = '\0';
 
         char morada_nova[MAX_LEN];
         printf("\nInsira a nova morada:  ");
-        //scanf(" %[^\n]", morada_nova);
+
         fgets(morada_nova, MAX_LEN, stdin);
 
 
@@ -928,7 +737,7 @@ void acidente() {
         scanf("%d %d %d", &data_nova_ocorrencia.dia, &data_nova_ocorrencia.mes, &data_nova_ocorrencia.ano);
 
         printf("\nInsira o tipo de acidente que o cao sofreu:");
-        //scanf(" %[^\n]", acidente);
+
         getchar();
         fgets(acidente, MAX_LEN, stdin);
 
