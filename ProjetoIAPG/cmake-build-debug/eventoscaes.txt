@@ -1,0 +1,10 @@
+acidente;4;10/10/2020;partiu a pata
+registos_medicos;8;07/07/2015;vacina
+registos_medicos;2;10/01/2023;cirugia
+acidente;6;01/12/2003;atropelamento
+acidente;4;27/11/2024;engoliu uma pedra
+mudanca_dono;11;Pedro Alvares Sousa;26;27/10/1990;pedrosousa@gmail.com;912345678;1746782;Porto;4450-330
+acidente;4;20/12/2022;caiu das escadas
+mudanca_dono;8;Ana Maria Pereira;49;18/11/1960;anamaria1960@gmail.com;917348163;2346785;Viseu;4433-201
+mudanca_morada;1;6/6/2019;Perafita;Castelo Branco
+mudanca_morada;7;6/1/2024;perafita;ponte de lima
