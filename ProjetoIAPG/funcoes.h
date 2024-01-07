@@ -35,7 +35,7 @@ void printcao(CAO cao);
 void estatisticas(int ncao, CAO array[]);
 void lerFicheiroCao(CAO array[], CAO arrayFicheiro[], int* ncao, char fileName[]);
 void printcaes(CAO array[], int ncao);
-int escreverFicheiroCao(CAO array[], int* ncao, char fileName[]);
+int escreverFicheiroCao(CAO array[], int ncao, int nFicheiro, char fileName[]);
 char* lerFicheiroConfigs(char fileName[]);
 int escreverFicheiroCaoBin(CAO array[], int ncao, char fileName[]);
 int lerFicheiroCaoBin(CAO array[], int ncao, char fileName[]);

@@ -47,7 +47,8 @@ CAO InserirNovoCao(CAO cao, int* ncao) {
     scanf ("%s", cao.cidadeNascimento);
 
     printf("\nMorada atual (Cidade): ");
-    scanf ("%s", cao.morada);
+    getchar();
+    scanf("%[^\n]%*c", cao.morada);
 
     printf("\nID do pai: ");
     scanf ("%d", &cao.id_pai);
@@ -66,6 +67,7 @@ void menu() {
     CAO array[MAX_LEN]; // array onde vao ficar os caes
     CAO cao;
     CAO arrayFicheiro[MAX_LEN];
+    int nFicheiro;
 
 
     int ncao = 0;
@@ -74,6 +76,7 @@ void menu() {
     //Leitura de caes
     if (stricmp(config, "txt") == 0) {
         lerFicheiroCao(array, arrayFicheiro ,&ncao, "bd_caes.txt");
+        nFicheiro = ncao;
     } else {
         lerFicheiroCaoBin(array, ncao, "bd_caes.bin"); //não tinha como ler "n" caes por não saber o número de caes para iterar sobre o bin
     }
@@ -105,7 +108,7 @@ void menu() {
                 estatisticas(ncao, array);
                 break;
             case 5:
-                escreverFicheiroCao(array, &ncao, "bd_caes.txt");
+                escreverFicheiroCao(array, ncao, nFicheiro, "bd_caes.txt");
                 escreverFicheiroCaoBin(array, ncao, "bd_caes.bin");
                 break;
             case 6:
@@ -420,7 +423,7 @@ void lerFicheiroCao(CAO array[], CAO arrayFicheiro[], int* ncao, char fileName[]
     fclose(dadosCao);
 }
 
-int escreverFicheiroCao(CAO array[], int* ncao, char fileName[])
+int escreverFicheiroCao(CAO array[], int ncao, int nFicheiro, char fileName[])
 {
     if (array == NULL)
     {
@@ -433,10 +436,20 @@ int escreverFicheiroCao(CAO array[], int* ncao, char fileName[])
     {
         return 0;
     }
-    for (int i = 0; i < *ncao; ++i) {
-        fprintf(dadosCao, "%d;%d;%d;%s;%s;%s;%d;%s;%s;%s;%s;%d;%d;%s;%s", array[i].id, array[i].anos, array[i].meses, array[i].genero,
-                array[i].raca, array[i].pelagem, array[i].peso, array[i].nome, array[i].comportamento, array[i].dataNascimento, array[i].cidadeNascimento,
-                array[i].id_pai, array[i].id_mae, array[i].cor, array[i].morada);
+
+    for (int i = 0; i < ncao; ++i) {
+        if (array[i].id != 0)
+        {
+            if (i < nFicheiro) {
+                fprintf(dadosCao, "%d;%d;%d;%s;%s;%s;%d;%s;%s;%s;%s;%d;%d;%s;%s", array[i].id, array[i].anos, array[i].meses, array[i].genero,
+                        array[i].raca, array[i].pelagem, array[i].peso, array[i].nome, array[i].comportamento, array[i].dataNascimento, array[i].cidadeNascimento,
+                        array[i].id_pai, array[i].id_mae, array[i].cor, array[i].morada);
+            } else {
+                fprintf(dadosCao, "\n%d;%d;%d;%s;%s;%s;%d;%s;%s;%s;%s;%d;%d;%s;%s", array[i].id, array[i].anos, array[i].meses, array[i].genero,
+                        array[i].raca, array[i].pelagem, array[i].peso, array[i].nome, array[i].comportamento, array[i].dataNascimento, array[i].cidadeNascimento,
+                        array[i].id_pai, array[i].id_mae, array[i].cor, array[i].morada);
+            }
+        }
     }
 
     fclose(dadosCao);
