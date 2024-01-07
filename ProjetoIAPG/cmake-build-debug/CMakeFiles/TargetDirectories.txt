@@ -1,0 +1,3 @@
+C:/Users/joaok/Desktop/ProjetoIAPG/ProjetoIAPG/cmake-build-debug/CMakeFiles/ProjetoIAPG.dir
+C:/Users/joaok/Desktop/ProjetoIAPG/ProjetoIAPG/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/joaok/Desktop/ProjetoIAPG/ProjetoIAPG/cmake-build-debug/CMakeFiles/rebuild_cache.dir
