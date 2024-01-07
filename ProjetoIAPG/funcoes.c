@@ -489,6 +489,8 @@ void verificarIntegridadeBD(CAO array[], CAO arrayFicheiro[], int ncao) {
     int idUnmatch[MAX_LEN];  // vai percorrer o array com os caes e verificar os ID. Se estiverem iguais aos do ficheiro vai considerar a integridade verificada com sucesso, caso n ele vai indicar o id do cao que esta no array mas n no ficheiro ( depois é so exportar para ficheiro que resolve)
     int index=0, encontrado=0, print=0;
 
+    lerFicheiroCao(array, arrayFicheiro, &ncao,"bd_caes.txt");
+
     for (int i = 0; i <= ncao; i++) {
         encontrado=0;
         for (int j = 0; j <= ncao; j++ ) {
